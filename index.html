@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Gambit Challenge - TUF-2000M</title>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+		<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+	</head>
+	<body>
+		<h1 class="display-5 text-center">Measurements from TUF-2000M</h1>
+		
+		<div class="w-75 p-3  container justify-content-center">
+			<table class="table table-striped">
+				<tbody>
+					<tr>
+						<th scope="row">Flow Rate</th>
+						<td><span id="flow_rate"></span><span> m<sup>3</sup>/h</span></td>
+					</tr>
+					<tr>
+						<th scope="row">Energy Flow Rate</th>
+						<td><span id="energy_flow_rate"></span><span> GJ/h</span></td>
+					</tr>				
+					<tr>
+						<th scope="row">Velocity</th>
+						<td><span id="velocity"></span><span> m/s</span></td>
+					</tr>				
+					<tr>
+						<th scope="row">Fluid Sound Speed</th>
+						<td><span id="fluid_sound_speed"></span><span> m/s</span></td>
+					</tr>				
+					<tr>
+						<th scope="row">Positive Accumulator</th>
+						<td><span id="positive_accumulator"></span></td>
+					</tr>
+					<tr>
+						<th scope="row">Positive Decimal Fraction</th>
+						<td><span id="positive_decimal_fraction"></span></td>
+					</tr>
+					<tr>
+						<th scope="row">Negative Accumulator</th>
+						<td><span id="negative_accumulator"></span></td>
+					</tr>
+					<tr>
+						<th scope="row">Negative Decimal Fraction</th>
+						<td><span id="negative_decimal_fraction"></span></td>
+					</tr>				
+					<tr>
+						<th scope="row">Positive Energy Accumulator</th>
+						<td><span id="positive_energy_accumulator"></span></td>
+					</tr>				
+					<tr>
+						<th scope="row">Positive Energy Decimal Fraction</th>
+						<td><span id="positive_energy_decimal_fraction"></span></td>
+					</tr>				
+					<tr>
+						<th scope="row">Negative Energy Accumulator</th>
+						<td><span id="negative_energy_accumulator"></span></td>
+					</tr>
+					<tr>
+						<th scope="row">Negative Energy Decimal Fraction</th>
+						<td><span id="negative_energy_decimal_fraction"></span></td>
+					</tr>
+					<tr>
+						<th scope="row">Net Accumulator</th>
+						<td><span id="net_accumulator"></span></td>
+					</tr>
+					<tr>
+						<th scope="row">Net Decimal Fraction</th>
+						<td><span id="net_decimal_fraction"></span></td>
+					</tr>
+					<tr>
+						<th scope="row">Net Energy Accumulator</th>
+						<td><span id="net_energy_accumulator"></span></td>
+					</tr>				
+					<tr>
+						<th scope="row">Net Energy Decimal Fraction</th>
+						<td><span id="net_energy_decimal_fraction"></span></td>
+					</tr>				
+					<tr>
+						<th scope="row">Temperature #1 inlet</th>
+						<td><span id="temperature1"></span><span>   <sup>o</sup>C</span></td>
+					</tr>				
+					<tr>
+						<th scope="row">Temperature #2 outlet</th>
+						<td><span id="temperature2"></span><span>   <sup>o</sup>C</span></td>
+					</tr>
+					<tr>
+						<th scope="row">Analog Input AI3</th>
+						<td><span id="analog_input_AI3"></span></td>
+					</tr>
+					<tr>
+						<th scope="row">Analog Input AI4</th>
+						<td><span id="analog_input_AI4"></span></td>
+					</tr>
+					<tr>
+						<th scope="row">Analog Input AI5</th>
+						<td><span id="analog_input_AI5"></span></td>
+					</tr>				
+					<tr>
+						<th scope="row">Current Input AI3</th>
+						<td><span id="current_input_AI3_1"></span><span> mA</span></td>
+					</tr>				
+					<tr>
+						<th scope="row">Current Input AI3</th>
+						<td><span id="current_input_AI3_2"></span><span> mA</span></td>
+					</tr>				
+					<tr>
+						<th scope="row">Current Input AI3</th>
+						<td><span id="current_input_AI3_3"></span><span> mA</span></td>
+					</tr>
+					<tr>
+						<th scope="row">System Password</th>
+						<td><span id="system_password"></span></td>
+					</tr>
+					<tr>
+						<th scope="row">Password For Hardware</th>
+						<td><span id="password_for_hardware"></span></td>
+					</tr>				
+					<tr>
+						<th scope="row">Date</th>
+						<td><span id="date"></span></td>
+					</tr>				
+					<tr>
+						<th scope="row">Day + Hour For Autosave</th>
+						<td><span id="day_hour_autosave"></span></td>
+					</tr>
+					<tr>
+						<th scope="row">Key To Input</th>
+						<td><span id="key_to_input"></span></td>
+					</tr>
+						<th scope="row">Go To Window #</th>
+						<td><span id="go_to_window"></span></td>
+					</tr>
+					<tr>
+						<th scope="row">LCD Back-lit lights for number of seconds</th>
+						<td><span id="LCD_back_lit_lights_seconds"></span><span> sec</span></td>
+					</tr>				
+					<tr>
+						<th scope="row">Times For The Beeper</th>
+						<td><span id="times_for_the_beeper"></span></td>
+					</tr>				
+					<tr>
+						<th scope="row">Error Code</th>
+						<td><span id="error_code"></span></td>
+					</tr>				
+					<tr>
+						<th scope="row">PT100 Resistance Of Inlet</th>
+						<td><span id="PT100_resistance_of_inlet"></span><span> Ohm</span></td>
+					</tr>
+					<tr>
+						<th scope="row">PT100 Resistance Of Outlet</th>
+						<td><span id="PT100_resistance_of_outlet"></span><span> Ohm</span></td>
+					</tr>
+					<tr>
+						<th scope="row">Total Travel Time</th>
+						<td><span id="total_travel_time"></span><span> &mu;s</span></td>
+					</tr>
+					<tr>
+						<th scope="row">Delta Travel Time</th>
+						<td><span id="delta_travel_time"></span><span> ns</span></td>
+					</tr>				
+					<tr>
+						<th scope="row">Upstream Travel Time</th>
+						<td><span id="upstream_travel_time"></span><span> &mu;s</span></td>
+					</tr>				
+					<tr>
+						<th scope="row">Downstream Travel Time</th>
+						<td><span id="downstream_travel_time"></span><span> &mu;s</span></td>
+					</tr>				
+					<tr>
+						<th scope="row">Output Current</th>
+						<td><span id="output_current"></span><span> mA</span></td>
+					</tr>
+					<tr>
+						<th scope="row">Signal Quality</th>
+						<td><span id="signal_quality"></span></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<script>
+			var xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function() {
+				if (this.readyState == 4 && this.status == 200) {
+				   document.getElementById("flow_rate").innerHTML = 
+				   xhttp.responseXML.getElementsByTagName("flow_rate")[0].childNodes[0].nodeValue;
+				   document.getElementById("energy_flow_rate").innerHTML = 
+				   xhttp.responseXML.getElementsByTagName("energy_flow_rate")[0].childNodes[0].nodeValue;
+				   document.getElementById("velocity").innerHTML = 
+				   xhttp.responseXML.getElementsByTagName("velocity")[0].childNodes[0].nodeValue;
+				   document.getElementById("fluid_sound_speed").innerHTML = 
+				   xhttp.responseXML.getElementsByTagName("fluid_sound_speed")[0].childNodes[0].nodeValue;
+				   document.getElementById("positive_accumulator").innerHTML = 
+				   xhttp.responseXML.getElementsByTagName("positive_accumulator")[0].childNodes[0].nodeValue;
+				   document.getElementById("positive_decimal_fraction").innerHTML = 
+				   xhttp.responseXML.getElementsByTagName("positive_decimal_fraction")[0].childNodes[0].nodeValue;
+				   document.getElementById("negative_accumulator").innerHTML = 
+				   xhttp.responseXML.getElementsByTagName("negative_accumulator")[0].childNodes[0].nodeValue;
+				   document.getElementById("negative_decimal_fraction").innerHTML = 
+				   xhttp.responseXML.getElementsByTagName("negative_decimal_fraction")[0].childNodes[0].nodeValue;
+				   document.getElementById("positive_energy_accumulator").innerHTML = 
+				   xhttp.responseXML.getElementsByTagName("positive_energy_accumulator")[0].childNodes[0].nodeValue;
+				   document.getElementById("positive_energy_decimal_fraction").innerHTML = 
+				   xhttp.responseXML.getElementsByTagName("positive_energy_decimal_fraction")[0].childNodes[0].nodeValue;
+				   document.getElementById("negative_energy_accumulator").innerHTML = 
+				   xhttp.responseXML.getElementsByTagName("negative_energy_accumulator")[0].childNodes[0].nodeValue;
+				   document.getElementById("negative_energy_decimal_fraction").innerHTML = 
+				   xhttp.responseXML.getElementsByTagName("negative_energy_decimal_fraction")[0].childNodes[0].nodeValue;
+				   document.getElementById("net_accumulator").innerHTML = 
+				   xhttp.responseXML.getElementsByTagName("net_accumulator")[0].childNodes[0].nodeValue;
+				   document.getElementById("net_decimal_fraction").innerHTML = 
+				   xhttp.responseXML.getElementsByTagName("net_decimal_fraction")[0].childNodes[0].nodeValue;
+				   document.getElementById("net_energy_accumulator").innerHTML = 
+				   xhttp.responseXML.getElementsByTagName("net_energy_accumulator")[0].childNodes[0].nodeValue;
+				   document.getElementById("net_energy_decimal_fraction").innerHTML = 
+				   xhttp.responseXML.getElementsByTagName("net_energy_decimal_fraction")[0].childNodes[0].nodeValue;
+				   document.getElementById("temperature1").innerHTML = 
+				   xhttp.responseXML.getElementsByTagName("temperature1")[0].childNodes[0].nodeValue;
+				   document.getElementById("temperature2").innerHTML = 
+				   xhttp.responseXML.getElementsByTagName("temperature2")[0].childNodes[0].nodeValue;
+				   document.getElementById("analog_input_AI3").innerHTML = 
+				   xhttp.responseXML.getElementsByTagName("analog_input_AI3")[0].childNodes[0].nodeValue;
+				   document.getElementById("analog_input_AI4").innerHTML = 
+				   xhttp.responseXML.getElementsByTagName("analog_input_AI4")[0].childNodes[0].nodeValue;
+				   document.getElementById("analog_input_AI5").innerHTML = 
+				   xhttp.responseXML.getElementsByTagName("analog_input_AI5")[0].childNodes[0].nodeValue;
+				   document.getElementById("current_input_AI3_1").innerHTML = 
+				   xhttp.responseXML.getElementsByTagName("current_input_AI3_1")[0].childNodes[0].nodeValue;
+				   document.getElementById("current_input_AI3_2").innerHTML = 
+				   xhttp.responseXML.getElementsByTagName("current_input_AI3_2")[0].childNodes[0].nodeValue;
+				   document.getElementById("current_input_AI3_3").innerHTML = 
+				   xhttp.responseXML.getElementsByTagName("current_input_AI3_3")[0].childNodes[0].nodeValue;
+				   document.getElementById("system_password").innerHTML = 
+				   xhttp.responseXML.getElementsByTagName("system_password")[0].childNodes[0].nodeValue;
+				   document.getElementById("password_for_hardware").innerHTML = 
+				   xhttp.responseXML.getElementsByTagName("password_for_hardware")[0].childNodes[0].nodeValue;
+				   document.getElementById("date").innerHTML = 
+				   xhttp.responseXML.getElementsByTagName("date")[0].childNodes[0].nodeValue;
+				   document.getElementById("day_hour_autosave").innerHTML = 
+				   xhttp.responseXML.getElementsByTagName("day_hour_autosave")[0].childNodes[0].nodeValue;
+				   document.getElementById("key_to_input").innerHTML = 
+				   xhttp.responseXML.getElementsByTagName("key_to_input")[0].childNodes[0].nodeValue;
+				   document.getElementById("go_to_window").innerHTML = 
+				   xhttp.responseXML.getElementsByTagName("go_to_window")[0].childNodes[0].nodeValue;
+				   document.getElementById("LCD_back_lit_lights_seconds").innerHTML = 
+				   xhttp.responseXML.getElementsByTagName("LCD_back_lit_lights_seconds")[0].childNodes[0].nodeValue;
+				   document.getElementById("times_for_the_beeper").innerHTML = 
+				   xhttp.responseXML.getElementsByTagName("times_for_the_beeper")[0].childNodes[0].nodeValue;
+				   document.getElementById("error_code").innerHTML = 
+				   xhttp.responseXML.getElementsByTagName("error_code")[0].childNodes[0].nodeValue;
+				   document.getElementById("PT100_resistance_of_inlet").innerHTML = 
+				   xhttp.responseXML.getElementsByTagName("PT100_resistance_of_inlet")[0].childNodes[0].nodeValue;
+				   document.getElementById("PT100_resistance_of_outlet").innerHTML = 
+				   xhttp.responseXML.getElementsByTagName("PT100_resistance_of_outlet")[0].childNodes[0].nodeValue;
+				   document.getElementById("total_travel_time").innerHTML = 
+				   xhttp.responseXML.getElementsByTagName("total_travel_time")[0].childNodes[0].nodeValue;
+				   document.getElementById("delta_travel_time").innerHTML = 
+				   xhttp.responseXML.getElementsByTagName("delta_travel_time")[0].childNodes[0].nodeValue;
+				   document.getElementById("upstream_travel_time").innerHTML = 
+				   xhttp.responseXML.getElementsByTagName("upstream_travel_time")[0].childNodes[0].nodeValue;
+				   document.getElementById("downstream_travel_time").innerHTML = 
+				   xhttp.responseXML.getElementsByTagName("downstream_travel_time")[0].childNodes[0].nodeValue;
+				   document.getElementById("output_current").innerHTML = 
+				   xhttp.responseXML.getElementsByTagName("output_current")[0].childNodes[0].nodeValue;
+				   document.getElementById("signal_quality").innerHTML = 
+				   xhttp.responseXML.getElementsByTagName("signal_quality")[0].childNodes[0].nodeValue;
+				}
+			};
+			xhttp.open("GET", "data.xml", true);
+			xhttp.send();
+		</script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+	</body>
+</html>
